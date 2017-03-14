@@ -15,6 +15,7 @@ exports.handler = function(event, context) {
   S3.getObject({Bucket: BUCKET, Key: originalKey}).promise()
     .then((data) => Sharp(data.Body)
         .resize(width, height)
+        .max()
         .toFormat('png')
         .toBuffer()
     )
