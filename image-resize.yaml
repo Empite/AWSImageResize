@@ -16,6 +16,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AccessControl: PublicRead
+      BucketName: netcollect-local-profile
       WebsiteConfiguration:
         IndexDocument: index.html
         RoutingRules:
